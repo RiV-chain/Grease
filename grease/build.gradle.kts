@@ -13,7 +13,6 @@ testing {
     suites {
         register<JvmTestSuite>("functionalTest") {
             useJUnit()
-            testType.set(TestSuiteType.FUNCTIONAL_TEST)
 
             dependencies {
                 implementation(gradleTestKit())
