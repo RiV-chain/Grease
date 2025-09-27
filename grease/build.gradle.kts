@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "io.deepmedia.tools"
-version = "0.3.6"
+version = "0.3.7"
 
 testing {
     suites {
