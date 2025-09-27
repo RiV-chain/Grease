@@ -132,7 +132,7 @@ internal fun Project.createProductFlavorConfigurations(
 // Create one configuration per build type.
 // Make it extend the root configuration so that artifacts are inherited.
 internal fun Project.createBuildTypeConfigurations(
-    buildTypes: NamedDomainObjectContainer<BuildType>,
+    buildTypes: NamedDomainObjectContainer<out BuildType>,
     isTransitive: Boolean,
     log: Logger
 ) {

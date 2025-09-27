@@ -175,7 +175,7 @@ open class GreasePlugin : Plugin<Project> {
                     /* Extra outputs that can probably be null. */
                     outAaptSafeManifestLocation = null,
                     /* Either LIBRARY or APPLICATION. When using LIBRARY we can't add lib dependencies */
-                    mergeType = ManifestMerger2.MergeType.FUSED_LIBRARY,
+                    mergeType = ManifestMerger2.MergeType.LIBRARY,
                     /* Manifest placeholders. Doing this the way the library manifest does. */
                     placeHolders = mergedFlavor?.manifestPlaceholders.orEmpty() + variant.manifestPlaceholders.get(),
                     /* Optional features to be enabled. */

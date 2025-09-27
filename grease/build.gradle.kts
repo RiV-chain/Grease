@@ -7,13 +7,12 @@ plugins {
 }
 
 group = "io.deepmedia.tools"
-version = "0.3.5"
+version = "0.3.6"
 
 testing {
     suites {
         register<JvmTestSuite>("functionalTest") {
             useJUnit()
-            testType.set(TestSuiteType.FUNCTIONAL_TEST)
 
             dependencies {
                 implementation(gradleTestKit())
