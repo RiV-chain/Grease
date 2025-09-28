@@ -72,18 +72,17 @@ deployer {
         }
     }
 
-    // use "deployNexus" to deploy to OSSRH / maven central
-    nexusSpec {
-        auth.user = secret("SONATYPE_USER")
-        auth.password = secret("SONATYPE_PASSWORD")
-        syncToMavenCentral = true
+    // use "deployCentralPortal" to deploy to central portal
+    centralPortalSpec {
+        auth.user.set(secret("SONATYPE_USER"))
+        auth.password.set(secret("SONATYPE_PASSWORD"))
     }
 
     // use "deployNexusSnapshot" to deploy to sonatype snapshots repo
     nexusSpec("snapshot") {
         auth.user = secret("SONATYPE_USER")
         auth.password = secret("SONATYPE_PASSWORD")
-        repositoryUrl = ossrhSnapshots1
+        repositoryUrl = "https://central.sonatype.com/repository/maven-snapshots/"
         release.version = "latest-SNAPSHOT"
     }
 

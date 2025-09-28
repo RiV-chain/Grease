@@ -20,7 +20,7 @@ jobs:
           java-version: 17
           distribution: temurin
           cache: gradle
-      - name: Publish to Maven Central
-        run: ./gradlew deployNexus
+      - name: Publish to Central Portal
+        run: ./gradlew deployCentralPortal
       - name: Publish to GitHub Packages
         run: ./gradlew deployGithub
